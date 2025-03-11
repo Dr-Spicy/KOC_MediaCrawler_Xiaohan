@@ -28,7 +28,7 @@ UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 10.001
+CRAWLER_MAX_SLEEP_SEC = 5.001
 
 # 代理IP池数量
 IP_PROXY_POOL_COUNT = 2
@@ -55,13 +55,13 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 500
+CRAWLER_MAX_NOTES_COUNT = 2
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 2
 
 # 是否开启爬图片模式, 默认不开启爬图片
-ENABLE_GET_IMAGES = True
+ENABLE_GET_IMAGES = False
 
 # 是否开启爬评论模式, 默认开启爬评论
 ENABLE_GET_COMMENTS = False
@@ -132,7 +132,8 @@ TIEBA_CREATOR_URL_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "5bd47767f16b990001e1072b"
+    "595b8e775e87e737755bf1bd", 
+    "55f2f7e3f5a2635bd2fac7b5"
     # ........................
 ]
 
