@@ -370,7 +370,7 @@ class XiaoHongShuCrawler(AbstractCrawler):
             if config.ENABLE_IP_PROXY:
                 crawl_interval = random.random()
             else:
-                crawl_interval = random.uniform(5, config.CRAWLER_MAX_SLEEP_SEC)
+                crawl_interval = random.uniform(8, config.CRAWLER_MAX_SLEEP_SEC)
             await self.xhs_client.get_note_all_comments(
                 note_id=note_id,
                 xsec_token=xsec_token,
