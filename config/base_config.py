@@ -13,7 +13,7 @@
 PLATFORM = "xhs"
 KEYWORDS = "Dallas,Food"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "cookie"  # qrcode or phone or cookie
-COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; webBuild=4.59.0; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; web_session=040069b649c138564f263527fa354ba9baee62; xsecappid=xhs-pc-web; acw_tc=0a4a316417417403036556448ebf5e068a368452eca52a763fa197705a1c42; websectiga=7750c37de43b7be9de8ed9ff8ea0e576519e8cd2157322eb972ecb429a7735d4; sec_poison_id=22b670dc-e5f7-4f60-a042-781ef351df04; loadts=1741740394712; unread={%22ub%22:%2267bd8de5000000002903db5b%22%2C%22ue%22:%2267bff06e000000000e007098%22%2C%22uc%22:27}"
+COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; webBuild=4.59.0; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; xsecappid=xhs-pc-web; acw_tc=0a0bb06217417529502084272e75c5651a5bae5586cbdb0c763b1e729f9fa8; websectiga=a9bdcaed0af874f3a1431e94fbea410e8f738542fbb02df1e8e30c29ef3d91ac; sec_poison_id=86e463ce-62fb-4362-997c-0ee58eb6ee88; web_session=040069b6b8b0c47329d84c59e4354b18502c91; loadts=1741754673267; unread={%22ub%22:%2267a9c1d50000000029016a4c%22%2C%22ue%22:%2267cfc52f0000000029016f22%22%2C%22uc%22:20}"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
 SORT_TYPE = "popularity_descending"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
@@ -28,10 +28,10 @@ UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 10.001
+CRAWLER_MAX_SLEEP_SEC = 15.001
 
 # 代理IP池数量
-IP_PROXY_POOL_COUNT = 2
+IP_PROXY_POOL_COUNT = 1
 
 # 代理IP提供商名称
 IP_PROXY_PROVIDER_NAME = "kuaidaili"
@@ -132,8 +132,10 @@ TIEBA_CREATOR_URL_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "595b8e775e87e737755bf1bd", 
-    "55f2f7e3f5a2635bd2fac7b5"
+    "55f2f7e3f5a2635bd2fac7b5",
+    "617961470000000002027fea",
+    "5f5119d80000000001003189",
+    "593a946750c4b410410c3805"
     # ........................
 ]
 
