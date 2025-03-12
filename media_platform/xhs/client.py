@@ -9,7 +9,7 @@
 # 使用本代码即表示您同意遵守上述原则和LICENSE中的所有条款。
 
 
-import asyncio
+import asyncio, random
 import json
 import re
 from typing import Any, Callable, Dict, List, Optional, Union
@@ -81,7 +81,7 @@ class XiaoHongShuClient(AbstractApiClient):
         self.headers.update(headers)
         return self.headers
 
-    @retry(stop=stop_after_attempt(3), wait=wait_fixed(1))
+    @retry(stop=stop_after_attempt(3), wait=wait_fixed(3))
     async def request(self, method, url, **kwargs) -> Union[str, Any]:
         """
         封装httpx的公共请求方法，对请求响应做一些处理
@@ -93,6 +93,8 @@ class XiaoHongShuClient(AbstractApiClient):
         Returns:
 
         """
+        await asyncio.sleep(random.uniform(2, 6))
+
         # return response.text
         return_response = kwargs.pop("return_response", False)
 

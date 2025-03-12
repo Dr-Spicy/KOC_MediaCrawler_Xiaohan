@@ -13,7 +13,7 @@
 PLATFORM = "xhs"
 KEYWORDS = "Dallas,Food"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "cookie"  # qrcode or phone or cookie
-COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; webBuild=4.59.0; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; xsecappid=xhs-pc-web; acw_tc=0a0bb06217417529502084272e75c5651a5bae5586cbdb0c763b1e729f9fa8; websectiga=a9bdcaed0af874f3a1431e94fbea410e8f738542fbb02df1e8e30c29ef3d91ac; sec_poison_id=86e463ce-62fb-4362-997c-0ee58eb6ee88; web_session=040069b6b8b0c47329d84c59e4354b18502c91; loadts=1741754673267; unread={%22ub%22:%2267a9c1d50000000029016a4c%22%2C%22ue%22:%2267cfc52f0000000029016f22%22%2C%22uc%22:20}"
+COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; webBuild=4.60.0; xsecappid=xhs-pc-web; acw_tc=0a4ad6e917418079223901970e48c4a58430f03e407a87a8602a59b80f923f; websectiga=9730ffafd96f2d09dc024760e253af6ab1feb0002827740b95a255ddf6847fc8; sec_poison_id=0970c515-9b5f-4d21-bb1d-57b22b4fb87f; web_session=040069b6556196248687e4afe4354b943c2df7; loadts=1741809603301; unread={%22ub%22:%2267d0dff0000000002503eef8%22%2C%22ue%22:%2267ce3a73000000002602d2be%22%2C%22uc%22:14}"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
 SORT_TYPE = "popularity_descending"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
@@ -22,19 +22,25 @@ CRAWLER_TYPE = (
     "search"  # 爬取类型，search(关键词搜索) | detail(帖子详情)| creator(创作者主页数据)
 )
 # 自定义User Agent（暂时仅对XHS有效）
-UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0'
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 # 是否开启 IP 代理
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 15.001
+CRAWLER_MAX_SLEEP_SEC = 20.001
 
 # 代理IP池数量
-IP_PROXY_POOL_COUNT = 1
+IP_PROXY_POOL_COUNT = 2
 
 # 代理IP提供商名称
-IP_PROXY_PROVIDER_NAME = "kuaidaili"
+# IP_PROXY_PROVIDER_NAME = "windscribe"
+
+# 设置协议类型（SOCKS5/HTTP）
+# proxy_protocol = "socks5" 
+
+# 请求间隔调至8秒（避免触发风控）
+#request_interval = 8  
 
 # 设置为True不会打开浏览器（无头浏览器）
 # 设置False会打开一个浏览器
@@ -58,7 +64,7 @@ START_PAGE = 1
 CRAWLER_MAX_NOTES_COUNT = 500
 
 # 并发爬虫数量控制
-MAX_CONCURRENCY_NUM = 2
+MAX_CONCURRENCY_NUM = 1
 
 # 是否开启爬图片模式, 默认不开启爬图片
 ENABLE_GET_IMAGES = False
@@ -88,8 +94,7 @@ XHS_SPECIFIED_NOTE_URL_LIST = [
 
 # 指定抖音需要爬取的ID列表
 DY_SPECIFIED_ID_LIST = [
-    "7280854932641664319",
-    "7202432992642387233",
+    "7280854932641664319"
     # ........................
 ]
 
@@ -132,7 +137,8 @@ TIEBA_CREATOR_URL_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "55f2f7e3f5a2635bd2fac7b5"
+    "5cfc717b000000000501b4de",
+    "5df4c6bb000000000100b24b"
     # ........................
 ]
 
