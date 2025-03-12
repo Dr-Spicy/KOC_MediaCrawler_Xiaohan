@@ -13,7 +13,7 @@
 PLATFORM = "xhs"
 KEYWORDS = "Dallas,Food"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "cookie"  # qrcode or phone or cookie
-COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; webBuild=4.59.0; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; web_session=040069b649c138564f263527fa354ba9baee62; xsecappid=xhs-pc-web; acw_tc=0a4adb4817417366854146672e32e38d55b5e818ee9cee7642e748012925f9; websectiga=29098a4cf41f76ee3f8db19051aaa60c0fc7c5e305572fec762da32d457d76ae; sec_poison_id=af7078e4-6bf4-48eb-8131-32e6d6246b6c; unread={%22ub%22:%2267c83c23000000000603a50f%22%2C%22ue%22:%2267afe97f00000000180115e7%22%2C%22uc%22:35}; loadts=1741737364452"
+COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; webBuild=4.59.0; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; web_session=040069b649c138564f263527fa354ba9baee62; xsecappid=xhs-pc-web; acw_tc=0a4a316417417403036556448ebf5e068a368452eca52a763fa197705a1c42; websectiga=7750c37de43b7be9de8ed9ff8ea0e576519e8cd2157322eb972ecb429a7735d4; sec_poison_id=22b670dc-e5f7-4f60-a042-781ef351df04; loadts=1741740394712; unread={%22ub%22:%2267bd8de5000000002903db5b%22%2C%22ue%22:%2267bff06e000000000e007098%22%2C%22uc%22:27}"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
 SORT_TYPE = "popularity_descending"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
@@ -40,7 +40,7 @@ IP_PROXY_PROVIDER_NAME = "kuaidaili"
 # 设置False会打开一个浏览器
 # 小红书如果一直扫码登录不通过，打开浏览器手动过一下滑动验证码
 # 抖音如果一直提示失败，打开浏览器看下是否扫码登录之后出现了手机号验证，如果出现了手动过一下再试。
-HEADLESS = False
+HEADLESS = True
 
 # 是否保存登录状态
 SAVE_LOGIN_STATE = True
@@ -55,7 +55,7 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 3
+CRAWLER_MAX_NOTES_COUNT = 500
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 2
