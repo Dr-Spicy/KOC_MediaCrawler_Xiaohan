@@ -28,7 +28,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 20
+CRAWLER_MAX_SLEEP_SEC = 25
 
 # 代理IP池数量
 IP_PROXY_POOL_COUNT = 2
@@ -137,9 +137,27 @@ TIEBA_CREATOR_URL_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "5c64384000000000110164ad"
-    ,"5d72c2a60000000001019168"
+    "5d72c2a60000000001019168"
     ,"5aa0cade11be1046ae887e60"
+    ,"55f2f7e3f5a2635bd2fac7b5"
+    ,"5cf3d4cd00000000100324a0"
+    ,"5b67b542a559a50001e1ff09"
+    ,"55481451b203d97e86008c02"
+    ,"5f5888a8000000000101e50d"
+    ,"5a74dca911be1032569e20df"
+    ,"5a6ada44db2e6012444e4a39"
+    ,"5994315250c4b44ce63f0df6"
+    ,"59417dd15e87e7122b80b498"
+    ,"558a4a065894460336de85bf"
+    ,"5859b26f6a6a6967855d7c65"
+    ,"5b6a0b58c207e50001f9124d"
+    ,"604fd7a70000000001007a46"
+    ,"6349a37f000000001802bbed"
+    ,"613f2b6a000000000201f3ba"
+    ,"627d9846000000002102336f"
+    ,"5ab3172c11be105422211c84"
+
+
     # ........................
 ]
 
