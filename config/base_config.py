@@ -13,7 +13,7 @@
 PLATFORM = "xhs"
 KEYWORDS = "Dallas,Food"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "cookie"  # qrcode or phone or cookie
-COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; webBuild=4.60.0; xsecappid=xhs-pc-web; acw_tc=0a4ad6e917418079223901970e48c4a58430f03e407a87a8602a59b80f923f; websectiga=9730ffafd96f2d09dc024760e253af6ab1feb0002827740b95a255ddf6847fc8; sec_poison_id=0970c515-9b5f-4d21-bb1d-57b22b4fb87f; web_session=040069b6556196248687e4afe4354b943c2df7; loadts=1741809603301; unread={%22ub%22:%2267d0dff0000000002503eef8%22%2C%22ue%22:%2267ce3a73000000002602d2be%22%2C%22uc%22:14}"
+COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; webBuild=4.59.0; xsecappid=xhs-pc-web; acw_tc=0a4ab16617418405885905844e70eb155cad0e26cb5504ef4267b31c138fca; websectiga=cffd9dcea65962b05ab048ac76962acee933d26157113bb213105a116241fa6c; sec_poison_id=871de418-914a-4c42-9fcb-b4777f22e72a; web_session=040069b649c138564f26412ce7354bd9d563ee; loadts=1741841500324; unread={%22ub%22:%2267cea3fa000000002903007a%22%2C%22ue%22:%2267d18d37000000002902e1d6%22%2C%22uc%22:15}"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
 SORT_TYPE = "popularity_descending"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
@@ -28,7 +28,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 20.001
+CRAWLER_MAX_SLEEP_SEC = 20
 
 # 代理IP池数量
 IP_PROXY_POOL_COUNT = 2
@@ -61,7 +61,7 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 500
+CRAWLER_MAX_NOTES_COUNT = 700
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 1
@@ -137,8 +137,9 @@ TIEBA_CREATOR_URL_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "5cfc717b000000000501b4de",
-    "5df4c6bb000000000100b24b"
+    "5c64384000000000110164ad"
+    ,"5d72c2a60000000001019168"
+    ,"5aa0cade11be1046ae887e60"
     # ........................
 ]
 
