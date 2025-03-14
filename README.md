@@ -5,7 +5,7 @@
 4. 把user_id更新到base_config.py的 XHS_CREATOR_ID_LIST里面, 然后根据下面的设置开始抓取, 最开始时候建议每次抓一个user且headless=False, 流程稳定熟悉之后headless=True,每次抓2-3个user, VPN换IP, (if needed)换cookie
 5. 根据creator_creator_日期.json的信息把KOC list表E-L列填上
 6. 注册新红数据, 利用每天免费额度填上KOC list表K列以后的部分
-7. **(重要)检查帖子的时候如果发现了10+这样的关键词, 请务必参考读出xhs笔记精确分享数.md来解决https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan/blob/main/%E8%AF%BB%E5%87%BAxhs%E7%AC%94%E8%AE%B0%E7%B2%BE%E7%A1%AE%E5%88%86%E4%BA%AB%E6%95%B0.md.**
+7. **(重要)检查帖子的时候如果发现了10+这样的关键词, 不必重新抓取, 而是参考读出xhs笔记精确分享数.md来手动解决https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan/blob/main/%E8%AF%BB%E5%87%BAxhs%E7%AC%94%E8%AE%B0%E7%B2%BE%E7%A1%AE%E5%88%86%E4%BA%AB%E6%95%B0.md.**
 
 **在xhs自选KOC rule:**
 DFW本地周边
