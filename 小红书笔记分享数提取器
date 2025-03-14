@@ -1,0 +1,55 @@
+// ==UserScript==
+// @name         小红书笔记分享数提取器
+// @namespace    http://tampermonkey.net/
+// @version      1.2
+// @description  从小红书笔记页面的 JS 变量中提取精确分享数（share_count), 添加随机延迟
+// @author       Xiaohan
+// @match        *://www.xiaohongshu.com/explore/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // 生成3-6秒随机延迟的封装函数
+    function getRandomDelay(min = 1001, max = 4010) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    // 核心数据提取逻辑
+    function extractShareCount() {
+        try {
+            const initialState = window.__INITIAL_STATE__;
+            if (!initialState?.note?.noteDetailMap) {
+                throw new Error('未找到关键变量 __INITIAL_STATE__');
+            }
+
+            const noteId = window.location.pathname.split('/').pop();
+            const noteData = initialState.note.noteDetailMap[noteId];
+            if (!noteData) {
+                throw new Error('未找到当前笔记的详情数据');
+            }
+
+            // 提取分享数（路径需根据实际页面结构调整）
+            const shareCount = noteData.note.interactInfo?.shareCount || '未知';
+            console.log('[脚本日志] 分享数:', shareCount);
+
+            // 插入页面显示
+            const titleElement = document.querySelector('.note-title');
+            if (titleElement) {
+                const shareSpan = document.createElement('span');
+                shareSpan.style.cssText = 'color: #ff3366; margin-left: 12px;';
+                shareSpan.textContent = `分享数: ${shareCount}`;
+                titleElement.appendChild(shareSpan);
+            }
+        } catch (e) {
+            console.error('[脚本错误] 提取失败:', e.message);
+        }
+    }
+
+    // 页面加载完成后触发随机延迟
+    window.addEventListener('load', function() {
+        const delayMs = getRandomDelay(); // 生成3-6秒随机延迟
+        setTimeout(extractShareCount, delayMs);
+    });
+})();
