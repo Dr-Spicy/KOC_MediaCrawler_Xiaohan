@@ -1,19 +1,20 @@
-流程概览:
+# 流程概览:
 1. 在xhs上自行找到符合下面具体条件的KOC.
 2. 到共享KOC list表上确认此KOC尚未被其他人认领
 3. 复制粘贴一个未被认领KOC的profile链接到KOC list column C, 用column D的函数提取出KOC的user_id
 4. 把user_id更新到base_config.py的 XHS_CREATOR_ID_LIST里面, 然后根据下面的设置开始抓取, 最开始时候建议每次抓一个user且headless=False, 流程稳定熟悉之后headless=True,每次抓2-3个user, VPN换IP, (if needed)换cookie
 5. 根据creator_creator_日期.json的信息把KOC list表E-L列填上
 6. 注册新红数据, 利用每天免费额度填上KOC list表K列以后的部分
+7. **(重要)检查帖子的时候如果发现了10+这样的关键词, 请务必参考来解决.**
 
-在xhs自选KOC rule:
+**在xhs自选KOC rule:**
 DFW本地周边
 粉丝在9000和200之间, 最好是8000和500之间
 有代表性, 最好在传统探店类外能有非垂直探店博主类, 混合探店博主类 非中文母语, 比如有一定粉丝基础的tk难民
 可以从已经找到的KOC的热帖的评论区去顺藤摸瓜找其他的candidates
 利用DFW本地学校等landmark
 
-如何使用KOC list表格:
+**如何使用KOC list表格:**
 A列自己名字,
 C列URL只保留?之前的部分(不然D列你用不了)
 D列使用我定义的函数直接提取user_id
@@ -23,68 +24,43 @@ K列以后从新红数据(请自行去注册,利用每天的免费额度)复制
 L列是新红图文合作报价, 如果是有对号(合作过而非预估), 请在 
 最后在新红数据截图保存网红的笔记分析, 因为它会提供最近180天的帖子的阅读量(扒不下来)
 
-最新的xhs爬虫设置相关文件
+**最新的xhs爬虫设置相关文件**
 https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan
 
-步骤教程:
+**步骤教程:**
 (注意:按照下面流程并稍作修改)
 git clone https://github.com/NanmiCoder/MediaCrawler.git
 变成
 git clone https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan.git
 
 
-一定要安装并用python3.9.6代替默认python interpretor, 细节看视频 
+**一定要安装并用python3.9.6代替默认python interpretor, 细节看视频** 
 
-如何找到自己的cookie:
+**如何找到自己的cookie:**
 登录xhs web后, 刷新出最新的homefeed里的request headers中寻找一个很长的cookie. 
 一定要把自己cookie放入base_config.py 的cookie
 
-检查自己的cookie是否仍然有效: 
+**检查自己的cookie是否仍然有效:** 
 在虚拟环境中输入 python 'test cookie.py', 如果输出200即有效
 
-如何开始爬:
+**如何开始爬:**
 在虚拟环境中输入 python main.py --platform xhs --lt cookie --type creator
 
-数据在哪:
+**数据在哪:**
 /data/xhs/json文件夹中
 结果会以天为单位保存在creator_creator.json and creator_contents.json. 请确保抓取后检查一下对KOC的帖子抓取是否完整,(检查一下新抓帖子的数量, 抽查帖子抓取的质量)
 
 
-抓取时的经验教训:
+**抓取时的经验教训:**
 1. 建议对于具体如何设置MediaCrawler运行环境和提取cookie有疑问的家人们, 可以参考我发的视频录屏
 2. CRAWLER_MAX_SLEEP_SEC
 设的大一些(geq20), 有流量追踪机制, 抓太快会被封IP几个小时, VPN设置到其他大洲(尤其是香港或者欧洲)或有帮助
 3. 建议一次抓少于3个KOC, 然后换IP with VPN
 4. 经常检查自己的cookie是否失效, 保质期可能不到几天, 甚至小于1天(after IP change)
-5. 出现error 102说明被强烈反制或者cookie可能失效, 需要换小号或者换IP
-6. 出现error 309说明系统觉得你抓取太快, 需要在config中prolong CRAWLER_MAX_SLEEP_SEC, 并检查当前KOC的笔记是否抓取完整 by note_id. 但一般来说Error 309结束后XHS服务器再次回复通话流量时候会重复抓取之前没有抓到的帖子. 
+5. 出现error 102说明被强烈风控或者cookie可能失效, 需要换小号或者换IP
+6. 出现error 309说明系统在soft风控你, 需要在config中prolong CRAWLER_MAX_SLEEP_SEC, 并检查当前KOC的笔记是否抓取完整 by note_id. 但一般来说Error 309结束后XHS服务器再次回复通话流量时候会重复抓取之前没有抓到的帖子. 
 7. 结果会以天为单位保存在creator_creator.json and creator_contents.json. 请确保抓取后检查一下对KOC的帖子抓取是否完整,(检查一下新抓帖子的数量, 抽查帖子抓取的质量)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+8. **(重要)检查帖子的时候如果发现了10+这样的关键词, 请务必参考来解决.**
 
 
 
