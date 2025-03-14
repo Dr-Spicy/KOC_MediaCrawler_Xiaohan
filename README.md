@@ -60,7 +60,7 @@ git clone https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan.git
 5. 出现error 102说明被强烈风控或者cookie可能失效, 需要换小号或者换IP
 6. 出现error 309说明系统在soft风控你, 需要在config中prolong CRAWLER_MAX_SLEEP_SEC, 并检查当前KOC的笔记是否抓取完整 by note_id. 但一般来说Error 309结束后XHS服务器再次回复通话流量时候会重复抓取之前没有抓到的帖子. 
 7. 结果会以天为单位保存在creator_creator.json and creator_contents.json. 请确保抓取后检查一下对KOC的帖子抓取是否完整,(检查一下新抓帖子的数量, 抽查帖子抓取的质量)
-8. **(重要)检查帖子的时候如果发现了10+这样的关键词, 请务必参考来解决.**
+8. **(重要)检查帖子的时候如果发现了10+这样的关键词, 请务必参考读出xhs笔记精确分享数.md来解决https://github.com/Dr-Spicy/KOC_MediaCrawler_Xiaohan/blob/main/%E8%AF%BB%E5%87%BAxhs%E7%AC%94%E8%AE%B0%E7%B2%BE%E7%A1%AE%E5%88%86%E4%BA%AB%E6%95%B0.md.**
 
 
 
