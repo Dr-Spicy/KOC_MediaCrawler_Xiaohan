@@ -93,7 +93,7 @@ class XiaoHongShuClient(AbstractApiClient):
         Returns:
 
         """
-        await asyncio.sleep(random.uniform(4, 10))
+        await asyncio.sleep(random.uniform(7, 13))
 
         # return response.text
         return_response = kwargs.pop("return_response", False)
