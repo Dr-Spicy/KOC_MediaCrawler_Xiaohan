@@ -13,7 +13,7 @@
 PLATFORM = "xhs"
 KEYWORDS = "Dallas,Food"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "cookie"  # qrcode or phone or cookie
-COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; x-user-id-creator.xiaohongshu.com=673d82700000000001001f70; customer-sso-sid=68c517481385782131648412f4b7fc55480eb92a; customerClientId=845148942376682; access-token-creator.xiaohongshu.com=customer.creator.AT-68c517481385782131648413jpuu3zy07ttsdvtn; galaxy_creator_session_id=kMS5OjUbBK2q76a02DcZp8LjXSGkAF0aZFDb; galaxy.creator.beaker.session.id=1741895867925023345192; webBuild=4.60.1; x-user-id-pgy.xiaohongshu.com=673d82700000000001001f70; solar.beaker.session.id=AT-68c517481715807416677893tj1fxoc3nqirxk96; access-token-pgy.xiaohongshu.com=customer.pgy.AT-68c517481715807416677893tj1fxoc3nqirxk96; access-token-pgy.beta.xiaohongshu.com=customer.pgy.AT-68c517481715807416677893tj1fxoc3nqirxk96; xsecappid=xhs-pc-web; acw_tc=0a0bb4a717419936849696357e015082ce759367666a41f372ab24a7e89a19; websectiga=8886be45f388a1ee7bf611a69f3e174cae48f1ea02c0f8ec3256031b8be9c7ee; sec_poison_id=07c4e45f-4168-42d3-9311-8b89ef39aa65; loadts=1741995214417; web_session=040069b6556196248687b6f4e1354b3d72fffc; unread={%22ub%22:%2267d4952a00000000090144cf%22%2C%22ue%22:%2267b47b4d000000000b014e17%22%2C%22uc%22:24}"
+COOKIES = "abRequestId=97b847d1-b4ae-5803-a58c-890f8e95c982; a1=19578fbf5a1ehgksn9hzeznf7xlm4ejs135ef1wkm50000344533; webId=e1dc600cf338c83b8d87ee142a55cfee; gid=yj2WYiS80YyWyj2WYiDi2qyE0ydxkTMIjxud2T6uIiWC1d2864dVMi888q442qq8ji0Kjidy; x-user-id-creator.xiaohongshu.com=673d82700000000001001f70; customer-sso-sid=68c517481385782131648412f4b7fc55480eb92a; customerClientId=845148942376682; access-token-creator.xiaohongshu.com=customer.creator.AT-68c517481385782131648413jpuu3zy07ttsdvtn; galaxy_creator_session_id=kMS5OjUbBK2q76a02DcZp8LjXSGkAF0aZFDb; galaxy.creator.beaker.session.id=1741895867925023345192; webBuild=4.60.1; x-user-id-pgy.xiaohongshu.com=673d82700000000001001f70; solar.beaker.session.id=AT-68c517481715807416677893tj1fxoc3nqirxk96; access-token-pgy.xiaohongshu.com=customer.pgy.AT-68c517481715807416677893tj1fxoc3nqirxk96; access-token-pgy.beta.xiaohongshu.com=customer.pgy.AT-68c517481715807416677893tj1fxoc3nqirxk96; xsecappid=xhs-pc-web; acw_tc=0a0b14c117420621077631501e6ff89c55f6685a8869384b2e294bd712e188; websectiga=f3d8eaee8a8c63016320d94a1bd00562d516a5417bc43a032a80cbf70f07d5c0; sec_poison_id=2138b0ac-ff88-4420-a3b0-1fb4d39ce2da; web_session=040069b6556196248687128ee0354b92f3ff0d; loadts=1742063299439; unread={%22ub%22:%2267cf9d860000000029039078%22%2C%22ue%22:%2267d158230000000028028ec7%22%2C%22uc%22:24}"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
 SORT_TYPE = "popularity_descending"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
@@ -28,7 +28,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 ENABLE_IP_PROXY = False
 
 # 未启用代理时的最大爬取间隔，单位秒（暂时仅对XHS有效）
-CRAWLER_MAX_SLEEP_SEC = 30
+CRAWLER_MAX_SLEEP_SEC = 60
 
 # 代理IP池数量
 IP_PROXY_POOL_COUNT = 2
@@ -141,17 +141,11 @@ XHS_CREATOR_ID_LIST = [
     #"5b67b542a559a50001e1ff09"
     #"55481451b203d97e86008c02"
     #"5f5888a8000000000101e50d"
-    "5b778c2d5b95340001d6de60"     
-    ,"604fd7a70000000001007a46"
+    #"5b778c2d5b95340001d6de60"     
     # ,"5a74dca911be1032569e20df"
-    # ,"5a6ada44db2e6012444e4a39"
-    # ,"5994315250c4b44ce63f0df6"
-    # ,"59417dd15e87e7122b80b498"
     # ,"558a4a065894460336de85bf"
-    # ,"5859b26f6a6a6967855d7c65"
-    # ,"5b6a0b58c207e50001f9124d"
-    # ,"6349a37f000000001802bbed"
-    # ,"613f2b6a000000000201f3ba"
+    "5859b26f6a6a6967855d7c65"
+
     # ,"627d9846000000002102336f"
     # ,"5ab3172c11be105422211c84"
     # ,"5bf0eea1da9ae10001cfd0a1"
